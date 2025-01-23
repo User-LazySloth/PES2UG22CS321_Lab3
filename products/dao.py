@@ -94,6 +94,13 @@ def list_products():
     
     cursor.execute('SELECT * FROM products')
     
+    # products = []
+    # rows = cursor.fetchall()
+    
+    # for i in range(len(rows)):
+    #     temp = rows[i]
+    #     products.append(temp)
+
     # Optimized from this line
     products = [dict(row) for row in cursor.fetchall()]
     cursor.close()

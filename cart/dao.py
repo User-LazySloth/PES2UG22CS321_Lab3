@@ -33,6 +33,14 @@ def get_cart(username: str) -> list:
         return []
     
     cart = cursor.fetchall()
+    # temp_cart = []
+    # for row in cart:
+    #     temp_cart.append(row)
+    
+    # final_cart = []
+    # for item in temp_cart:
+    #     final_cart.append(item)
+    
     final_cart = [dict(row) for row in cart] # Optimized this line
     
     cursor.close()

@@ -22,6 +22,18 @@ def get_cart(username: str) -> list:
         return []
     
     items = []
+    # for cart_detail in cart_details:
+    #     contents = cart_detail['contents']
+    #     evaluated_contents = eval(contents)  
+    #     for content in evaluated_contents:
+    #         items.append(content)
+    
+    # i2 = []
+    # for i in items:
+    #     temp_product = products.get_product(i)
+    #     i2.append(temp_product)
+    # return i2
+    
     # Optimized from here
     for cart_detail in cart_details:
         contents = json.loads(cart_detail['contents'])
